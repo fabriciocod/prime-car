@@ -1,5 +1,6 @@
 import './globals.css'
 import styles from './styles.module.css'
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Prime Car',
@@ -28,11 +29,19 @@ function Menu({children, x, y}){
   );
 }
 
+function Contato({x, y}){
+  return(
+    <p style={{left: x, top: y}} className={styles.contato}>Contact Us</p>
+  );
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={styles.corpo}>
+       
       <header>
+        
         <Logo x={100} y={32}/>
 
         <Menu x={781} y={41.5}>
@@ -43,11 +52,14 @@ export default function RootLayout({ children }) {
           <ItemMenu nome = "Car"/>
 
         </Menu>
+
+        <Contato></Contato>
       </header>
 
       <main>
        {children} 
       </main>
+
       
       </body>
     </html>
