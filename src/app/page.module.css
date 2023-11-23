@@ -1,8 +1,10 @@
 .titulo{
-  display: flex;
-  justify-content: flex-start;
+  font-size: 130px;
+  position: absolute;
   top: 204px;
   left: 1009px;
- 
-  width: 811px;
+  /* right: 20px;
+  bottom: 556px; */
+  width: 900px;
+  align-items: left;
 }

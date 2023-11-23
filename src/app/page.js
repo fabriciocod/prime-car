@@ -1,11 +1,18 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
+
 function Titulo({x, y}){
   return(
     <h1 style={{left: x, top: y}} className={styles.titulo}>
       More economy, same speed
     </h1>
+  );
+}
+
+function Texto({x, y}){
+  return(
+    <p style={{left: x, top: y}} className={styles.texto}>The most beloved cars of the moment for those who want to ride in style without spending too much</p>
   );
 }
 export default function Home() {
@@ -18,6 +25,7 @@ export default function Home() {
     alt='Fundo da Home'/>
     
     <Titulo></Titulo>
+    <Texto></Texto>
     </>
     
   );
