@@ -30,10 +30,12 @@ export default function Home() {
     width={1920}
     height={1020}
     alt='Fundo da Home'/>
+
+    <Botao x={1661} y={698}></Botao>
     
     <Titulo></Titulo>
     <Texto></Texto>
-    <Botao></Botao>
+    
     </>
     
   );
