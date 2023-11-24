@@ -1,10 +1,23 @@
 .titulo{
-  font-size: 130px;
+  font-size: 100px;
   position: absolute;
   top: 204px;
   left: 1009px;
   /* right: 20px;
   bottom: 556px; */
-  width: 900px;
-  align-items: left;
+  width: 811px;
+  height: 260px;
+  text-align: right;
+}
+
+.texto{
+  font-size: 32px;
+  position: absolute;
+  left: 1502px;
+  top: 600px;
+  text-align: right;
+  
+  width: 318px;
+  height: 190px;
+  margin: 0;
 }

@@ -15,6 +15,13 @@ function Texto({x, y}){
     <p style={{left: x, top: y}} className={styles.texto}>The most beloved cars of the moment for those who want to ride in style without spending too much</p>
   );
 }
+
+function Botao({x, y}){
+  return(
+    <button style={{left: x, top: y}} classNamen={styles.botao}>Discover</button>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -26,6 +33,7 @@ export default function Home() {
     
     <Titulo></Titulo>
     <Texto></Texto>
+    <Botao></Botao>
     </>
     
   );
