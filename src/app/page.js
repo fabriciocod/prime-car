@@ -4,20 +4,22 @@ import seta from '../../public/seta.svg'
 import background from '../../public/background.png'
 
 /*Inicio da Home */
-function Titulo({x, y}){
-  return(
-    <h1 style={{left: x, top: y}} className={styles.titulo}>
-      More economy, same speed
+function Titulo({ x, y, children }) {
+  return (
+    <h1 style={{ left: x, top: y }} className={styles.titulo}>
+      {children}
     </h1>
   );
 }
 
-function Texto({x, y}){
+function Texto({x, y, children}){
   return(
-    <p style={{left: x, top: y}} className={styles.texto}>The most beloved cars of the moment for those who want to ride in style without spending too much</p>
+    <p style={{left: x, top: y}} className={styles.texto}>
+      {children}
+    </p>
   );
 }
-
+// ajustar o elemento para um botão
 function Botao({x,y}){
   return(
     <p style={{left: x, top: y}}className={styles.botao}>
@@ -30,40 +32,30 @@ function Botao({x,y}){
 export default function Home() {
   return (
     <>
-      
-      <Botao x={1633} y={850}/>
+      <Botao x={1633} y={850} />
 
       <Image
-      src={background}
-      // width={1920}
-      // height={1020}
-      alt='Fundo da Home'/>
+        src={background}
+        alt="Fundo da Home"
+      />
 
-      <Titulo></Titulo>
-           
-      <Texto></Texto>
-     
+      <Titulo x={1009} y={204}>
+        More economy, same speed
+      </Titulo>
+
+      
+
+      <Texto x={1502} y={600}>
+      The most beloved cars of the moment for those who want 
+      to ride in style without spending too much
+      </Texto>
+
+      {/* Inicico do About */}
+
+      <Titulo x={554.5} y={60} className={styles.aboutTitulo}>
+        About
+      </Titulo>
     </>
-    
   );
 }
 /* Final da Home*/
-
-/*Inicio do Page About US */
-// function PageTitulo({x, y}){
-//   return(
-//     <h1 style={{left: x, top: y}} className={styles.pagetitulo}>
-//       More economy, same speed
-//     </h1>
-//   );
-// }
-
-// export default function PageAbout() {
-//   return (
-//     <>
-//     <PageTitulo></PageTitulo>
-    
-//     </>
-    
-//   );
-// }
