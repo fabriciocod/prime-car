@@ -1,12 +1,18 @@
+* {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   background: #080808;
   color:#fff;
-  display: inline-flex;
-  width: 1920px;
-  height: 470px;
-  flex-direction: column;
-  align-items: flex-start;
-
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
+  /* width: 1920px;
+  height: 470px; */
   
+  /* align-items: center; */
 }
+
 

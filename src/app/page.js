@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import seta from '../../public/seta.svg'
+import background from '../../public/background.png'
 
-
+/*Inicio da Home */
 function Titulo({x, y}){
   return(
     <h1 style={{left: x, top: y}} className={styles.titulo}>
@@ -16,27 +18,52 @@ function Texto({x, y}){
   );
 }
 
-function Botao({x, y}){
+function Botao({x,y}){
   return(
-    <button style={{left: x, top: y}} classNamen={styles.botao}>Discover</button>
+    <p style={{left: x, top: y}}className={styles.botao}>
+      Discover
+      <Image src={seta}/></p>
   );
 }
+
 
 export default function Home() {
   return (
     <>
-    <Image
-    src="/background.png"
-    width={1920}
-    height={1020}
-    alt='Fundo da Home'/>
+      
+      <Botao x={1633} y={850}/>
 
-    <Botao x={1661} y={698}></Botao>
-    
-    <Titulo></Titulo>
-    <Texto></Texto>
-    
+      <Image
+      src={background}
+      // width={1920}
+      // height={1020}
+      alt='Fundo da Home'/>
+
+      <Titulo></Titulo>
+           
+      <Texto></Texto>
+     
     </>
     
   );
 }
+/* Final da Home*/
+
+/*Inicio do Page About US */
+// function PageTitulo({x, y}){
+//   return(
+//     <h1 style={{left: x, top: y}} className={styles.pagetitulo}>
+//       More economy, same speed
+//     </h1>
+//   );
+// }
+
+// export default function PageAbout() {
+//   return (
+//     <>
+//     <PageTitulo></PageTitulo>
+    
+//     </>
+    
+//   );
+// }
