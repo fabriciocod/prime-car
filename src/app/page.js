@@ -28,6 +28,29 @@ function Botao({x,y}){
   );
 }
 
+function AboutPage(){
+  return(
+    <div className={styles.container_about}>
+      <div className={styles.aboutTitulo}>
+        <Titulo >
+        About
+        </Titulo>
+      </div>
+
+      <div className={styles.abouTexto}>
+        <Texto>
+        <p> We pride ourselves at being able to get our customer into the car that they want, and more importantly, at they price they are looking for.</p>
+
+        <p>We maintain outstanding customer service by listening to our customers and making sure that we meet their needs. Even if you don't buy from us, we will offer free advice on whe to look for when buying a used car or truck.</p>
+
+        <p>Our philosophy is to accomodate you, the customer, with outstanding service while providing you the highest quality automobile needs at wholesale prices. We have a wide selection of vehicles and the expertise to deal with what you are looking for.</p>
+
+        </Texto>
+      </div>
+      
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -51,11 +74,10 @@ export default function Home() {
       </Texto>
 
       {/* Inicico do About */}
-
-      <Titulo x={554.5} y={60} className={styles.aboutTitulo}>
-        About
-      </Titulo>
+      <AboutPage x={554.5} y={60}/>
+      
     </>
   );
 }
+
 /* Final da Home*/

@@ -29,9 +29,17 @@
   padding: 12px 28px;
 }
 
-/* Page About */
 
-.aboutTitulo{
-  text-align: center;
-  text-shadow: 0px 0px 20px rgba(251, 248, 248, 0.25);
+/* Definições da PageAbout */
+.abouTexto{
+  border: 1px solid #fff;
+  font-size: 24px;
+  width: 785px;
+  height: 191px;
+}
+
+.container_about{
+  border: 2px solid #fff;
+  width: 1920px;
+  height: 727px;
 }
