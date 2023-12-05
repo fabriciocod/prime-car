@@ -1,45 +1,10 @@
-.titulo{
-  font-size: 95px;
-  position: absolute;
+/* Inicio da Page_index */
+.container_index{
+    
+    border: 1px solid #af0909;
 
-  width: 811px;
-  height: 260px;
-  text-align: right;
-}
-
-.texto{
-  font-size: 32px;
-  position: absolute;
-  left: 1502px;
-  top: 600px;
-  text-align: right;
-  
-  width: 318px;
-  height: 190px;
-  margin: 0;
-}
-
-.botao{
-  border: none;
-  border-radius: 8px;
-  border: 2px solid #fff;
-  font-size: 24px;
-  position: absolute;
-  
-  padding: 12px 28px;
-}
+    width: 811px;
+    height: 535px;
 
 
-/* Definições da PageAbout */
-.abouTexto{
-  border: 1px solid #fff;
-  font-size: 24px;
-  width: 785px;
-  height: 191px;
-}
-
-.container_about{
-  border: 2px solid #fff;
-  width: 1920px;
-  height: 727px;
 }

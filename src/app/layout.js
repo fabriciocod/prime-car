@@ -1,14 +1,15 @@
 import './globals.css'
 import styles from './styles.module.css'
-import Image from 'next/image';
+import backgroundImage from '../../public/background.png';
+
 
 export const metadata = {
   title: 'Prime Car',
 }
 // Adiciona o logo 
-function Logo({x,y}){
+function Logo(){
   return(
-    <p style={{left: x, top: y}} className={styles.logo}>PRIME CAR</p>
+    <p className={styles.logo}>PRIME CAR</p>
   );
 }
 
@@ -19,9 +20,9 @@ function ItemMenu({nome}){
   );
 }
 
-function Menu({children, x, y}){
+function Menu({children}){
   return(
-    <ul style={{left: x, top: y}} className={styles.menu}>
+    <ul className={styles.menu}>
       {children.map((itemMenu) => (
         <li key={itemMenu.nome}>{itemMenu}</li>
       ))}
@@ -29,9 +30,9 @@ function Menu({children, x, y}){
   );
 }
 
-function Contato({x, y}){
+function Contato(){
   return(
-    <p style={{left: x, top: y}} className={styles.contato}>Contact Us</p>
+    <p className={styles.contato}>Contact Us</p>
   );
 }
 
@@ -41,19 +42,34 @@ export default function RootLayout({ children }) {
       <body className={styles.corpo}>
        
       <header>
+        <div 
+        style={{backgroundImage: `url(${backgroundImage.src})`
         
-        <Logo x={100} y={32}/>
+        
+      }}
+        
+        className={styles.container_header}>
+          <div classNome={styles.logo}>
+            <Logo x={100} y={32}/>
+          </div>
+        
+          <div className={styles.menu}>
 
-        <Menu x={781} y={41.5}>
+            <Menu>
 
-          <ItemMenu nome = "Home"/>
-          <ItemMenu nome = "About"/>
-          <ItemMenu nome = "Benefits"/>
-          <ItemMenu nome = "Car"/>
+              <ItemMenu nome = "Home"/>
+              <ItemMenu nome = "About"/>
+              <ItemMenu nome = "Benefits"/>
+              <ItemMenu nome = "Car"/>
 
-        </Menu>
+            </Menu>
+          </div>
 
-        <Contato></Contato>
+          <div>
+            <Contato/>
+          </div>
+        
+        </div>
       </header>
 
       <main>
