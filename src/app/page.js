@@ -29,9 +29,9 @@ function Botao(){
   );
 }
 
-function Page_index(){
+function Page_index(x, y){
   return(
-    <div className={styles.container_index}>
+    <div style={{right: x, top: y}} className={styles.container_index}>
       <div className={styles.index_Titulo}>
         <Titulo>
         Titulo

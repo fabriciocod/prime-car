@@ -1,5 +1,8 @@
 /* Inicio da Page_index */
 .container_index{
+    right: 1009px;
+    top: 204px;
+    position: absolute;
     
     border: 1px solid #af0909;
 
