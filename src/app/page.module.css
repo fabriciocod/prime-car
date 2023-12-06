@@ -4,12 +4,12 @@
     flex-direction: row;
     justify-content: flex-end;
     
-    top: 204px;
-
+    top: 204px; 
     left: 50px;
+
     position: fixed;
     
-    border: 1px solid #f2ebeb;
+    /* border: 1px solid #f2ebeb; */
 
     width: 1800px;
     height: 535px;
@@ -33,10 +33,124 @@
 .index_Texto{
     font-size: 32px;
     text-align: right;
+    
 
     width: 318px;
 
     left: 1530px;
-    top: 490px;
+    top: 495px;
+    position: fixed;
+}
+
+.index_botao button{
+
+    background-color: transparent;
+    color: #fff;
+    
+    border: 2px solid #fff;
+    border-radius: 8px;
+    font-size: 32px;
+
+    top:730px;
+    left:1633px;
+
+    position: fixed;
+    padding: 12px 28px;
+}
+/* Final Page Index */
+
+/* Inicio Page About */
+
+.container_About{
+    background-color: #5e59592d;
+    /* border: 1px solid #f1e6e6; */
+
+    width: 1920px;
+    height: 727px;
+
+    position: fixed;
+}
+
+.about_Conteudo{
+    /* border: 1px solid #701313; */
+
+    display: flex;
+    justify-content: space-between;
+    
+
+    height: 416px;
+
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.about_Titulo{
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+.about_Texto{
+
+    text-align: justify;
+    /* border: 1px solid #f1e6e6; */
+
+    font-size: 24px;
+    
+    width: 785px;    
+}
+
+.about_Card{
+    /* border: 1px solid #f1e6e6; */
+    border-radius: 10px;
+
+    width: 850px; 
+    height: 416px; 
+}
+
+/* Final Page About */
+
+/* Inicio Page Benefits */
+.container_Benefits{
+    border: 1px solid #fff;
+
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+
+    top:1754px;
+    left:0px;
+
+    position: fixed;
+
+    width: 1920px;
+    height: 1026px;
+}
+
+.benefits_Titulo{
+    align-content: center;
+
+    /* border: 1px solid #fff; */
+
+   
+    
+    font-size: 50px;
+
+    text-align: center;
+    width: 1284px;
+    height: 193px;
+
+    left: 318px;
+
+    position: fixed;
+}
+
+.benefits_Texto{
+
+    border: 1px solid #fff;
+    font-size: 24px;
+    
+    top:2116px;
     position: fixed;
 }

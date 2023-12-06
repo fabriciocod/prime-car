@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import seta from '../../public/seta.svg'
+import about_car from '../../public/about_car.png'
 
 
-/*Inicio da Home */
 function Titulo({children }) {
   return (
     <h1 className={styles.titulo}>
@@ -22,16 +22,18 @@ function Texto({children}){
 // ajustar o elemento para um botão
 function Botao(){
   return(
-    <p className={styles.botao}>
+    <button className={styles.botao}>
       Discover
       <Image src={seta}/>
-    </p>
+    </button>
   );
 }
 
+// Inicio Page Index
 function Page_index(x, y){
   return(
     <div style={{right: x, top: y}} className={styles.container_index}>
+      
       <div className={styles.index_Titulo}>
         <Titulo>
         More economy, same speed
@@ -44,19 +46,84 @@ function Page_index(x, y){
         </Texto>
       </div>
       
-      <button className={styles.index_botao}>Discover</button>
+      <div className={styles.index_botao}>
+        <Botao/>
+      </div>
+      
+    </div>
+  );
+}
+// Final Page Index
+
+// Inicio Page About
+function Page_About(x, y){
+  return(
+    <div style={{right: x, top: y}} className={styles.container_About}>
+
+      <div className={styles.about_Titulo}>
+        <Titulo>
+          ABOUT US
+        </Titulo>
+      </div>
+
+    <div className={styles.about_Conteudo}>
+
+        <div className={styles.about_Texto}>
+          <Texto>
+            <p>
+            We pride ourselves at being able to get our customer into the car that they want, and more importantly, at they price they are looking for. 
+            </p>
+
+            <p>
+            We maintain outstanding customer service by listening to our customers and making sure that we meet their needs. Even if you don't buy from us, we will offer free advice on whe to look for when buying a used car or truck. 
+            </p>
+
+            <p>
+            Our philosophy is to accomodate you, the customer, with outstanding service while providing you the highest quality automobile needs at wholesale prices. We have a wide selection of vehicles and the expertise to deal with what you are looking for.
+            </p>
+          </Texto>
+        </div>
+
+        <div className={styles.about_Card}>
+        <Image src={about_car}/>
+        </div>
+      
+      </div>
+    </div>
+  );
+}
+// Final Page About
+
+// Inicio Page Benefits
+function Page_Benefits({x,y}){
+  return(
+    <div style={{right: x, top: y}} className={styles.container_Benefits}>
+
+      <div className={styles.benefits_Titulo}>
+        <Titulo>
+        All the benefits you will get when you shop with us
+        </Titulo>
+      </div>
+
+      <div className={styles.benefits_Texto}>
+        <Texto>
+        Take advantage of everything you can have now by buying your new car at Prime Car
+        </Texto>
+      </div>
+
     </div>
   );
 }
 
+// Final Page Benefits
+
 export default function Home() {
   return (
     <>
-     
-      <Page_index/>
-
-
-      </>
+     <Page_index/>
+     <Page_About/>
+     <Page_Benefits/>
+    </>
     
   );
 }
