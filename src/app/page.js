@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import seta from '../../public/seta.svg'
-import background from '../../public/background.png'
+
 
 /*Inicio da Home */
 function Titulo({children }) {
@@ -34,13 +34,13 @@ function Page_index(x, y){
     <div style={{right: x, top: y}} className={styles.container_index}>
       <div className={styles.index_Titulo}>
         <Titulo>
-        Titulo
+        More economy, same speed
         </Titulo>
       </div>
 
       <div className={styles.index_Texto}>
         <Texto>
-        Texto
+        The most beloved cars of the moment for those who want to ride in style without spending too much
         </Texto>
       </div>
       

@@ -1,13 +1,24 @@
 /* define o designer do Logo */
 
+/* inicio do Header */
 .container_header{
-    display: flex;
-    justify-content: space-between;
-    align-items:flex-start;
+   
     padding: 0;
     
     width: 1920px;
     height: 1020px;
+    
+}
+
+.container_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    left: 50px;
+    position: fixed;
+    
+
+    width: 1800px;
 }
 
 .logo{
@@ -31,4 +42,8 @@
     font-size: 24px;
     padding: 8px 32px;
 }
+/* final do Header */
+
+/* Inicio Page Index */
+
 

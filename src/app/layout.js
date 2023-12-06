@@ -46,29 +46,31 @@ export default function RootLayout({ children }) {
         style={{backgroundImage: `url(${backgroundImage.src})`
         
         
-      }}
-        
-        className={styles.container_header}>
-          <div classNome={styles.logo}>
-            <Logo x={100} y={32}/>
-          </div>
-        
-          <div className={styles.menu}>
+      }} className={styles.container_header}>
 
-            <Menu>
+        <div className={styles.container_nav}>
 
-              <ItemMenu nome = "Home"/>
-              <ItemMenu nome = "About"/>
-              <ItemMenu nome = "Benefits"/>
-              <ItemMenu nome = "Car"/>
+            <div classNome={styles.logo}>
+              <Logo x={100} y={32}/>
+            </div>
+          
+            <div className={styles.menu}>
 
-            </Menu>
-          </div>
+              <Menu>
 
-          <div>
-            <Contato/>
-          </div>
-        
+                <ItemMenu nome = "Home"/>
+                <ItemMenu nome = "About"/>
+                <ItemMenu nome = "Benefits"/>
+                <ItemMenu nome = "Car"/>
+
+              </Menu>
+            </div>
+
+            <div>
+              <Contato/>
+            </div>
+
+        </div>
         </div>
       </header>
 

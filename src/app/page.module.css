@@ -1,13 +1,16 @@
 /* Inicio da Page_index */
 .container_index{
-    right: 1009px;
+    
+    /* flex-direction: row;
+    justify-content: flex-end; */
+    /* right: 300px;
     top: 204px;
-    position: absolute;
+    position: fixed; */
     
     border: 1px solid #af0909;
 
-    width: 811px;
+    width: 1920px;
     height: 535px;
 
-
+    margin-left: 0;
 }
