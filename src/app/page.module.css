@@ -35,7 +35,7 @@
     text-align: right;
     
 
-    width: 318px;
+    width: 318px;align-content: center;
 
     left: 1530px;
     top: 495px;
@@ -149,4 +149,28 @@
 
     top:2116px;
     position: fixed;
+}
+
+.benefits_Card{
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+
+    width: 1460px;
+    height: 400px;
+
+    top: 2300px;
+
+    position: fixed;
+}
+
+.card_conteudo{
+    border: 1px solid #8d2121;
+
+    
+
+    width: 1200px;
+    height: 350px;
+
+    
 }

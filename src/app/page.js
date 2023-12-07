@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import seta from "../../public/seta.svg";
 import about_car from "../../public/about_car.png";
+import backgroundImage from "../../public/backg_benefits.png";
 
 function Titulo({ children }) {
   return <h1 className={styles.titulo}>{children}</h1>;
@@ -19,7 +20,7 @@ function Botao() {
   return (
     <button className={styles.botao}>
       Discover
-      <Image src={seta} />
+      <Image src={seta}/>
     </button>
   );
 }
@@ -91,7 +92,9 @@ function Page_About() {
 // Inicio Page Benefits
 function Page_Benefits() {
   return (
-    <div className={styles.container_Benefits}>
+    <div style={{backgroundImage: `url(${backgroundImage.src})`}}
+    className={styles.container_Benefits}>
+
       <div className={styles.benefits_Titulo}>
         <Titulo>All the benefits you will get when you shop with us</Titulo>
       </div>
@@ -101,6 +104,40 @@ function Page_Benefits() {
           Take advantage of everything you can have now by buying your new car
           at Prime Car
         </Texto>
+      </div>
+
+      <div className={styles.benefits_Card}>
+
+        <div className={styles.card_conteudo}>
+
+          <div className={styles.map}>
+          imagealign-content: center;
+
+          Texto 1
+
+          Texto 2
+          
+          </div> 
+
+          <div className={styles.caledario}>
+          image
+
+          Texto 1
+
+          Texto 2
+          
+          </div>
+
+          <div className={styles.chave}>
+          image
+
+          Texto 1
+
+          Texto 2
+          
+          </div>   
+        </div>
+
       </div>
     </div>
   );
