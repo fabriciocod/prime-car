@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
 
         <div className={styles.container_nav}>
 
-            <div classNome={styles.logo}>
+            <div className={styles.logo}>
               <Logo x={100} y={32}/>
             </div>
           

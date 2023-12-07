@@ -42,6 +42,14 @@
     position: fixed;
 }
 
+.texto{
+    font-size: 24px;
+}
+
+.subTitulo{
+    font-size: 32px;
+}
+
 .index_botao button{
 
     background-color: transparent;
@@ -91,17 +99,10 @@
 }
 
 .about_Texto{
-
-    text-align: justify;
-    /* border: 1px solid #f1e6e6; */
-
-    font-size: 24px;
-    
     width: 785px;    
 }
 
 .about_Card{
-    /* border: 1px solid #f1e6e6; */
     border-radius: 10px;
 
     width: 850px; 
@@ -116,8 +117,9 @@
 
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     justify-content: center;
+
+    gap: 40px;
 
     top:1754px;
     left:0px;
@@ -130,14 +132,11 @@
 
 .benefits_Titulo{
     align-content: center;
-
-    /* border: 1px solid #fff; */
-
-   
     
     font-size: 50px;
 
     text-align: center;
+
     width: 1284px;
     height: 193px;
 
@@ -148,9 +147,6 @@
 
 .benefits_Texto{
 
-    border: 1px solid #fff;
-    font-size: 24px;
-    
     top:2116px;
     position: fixed;
 }
