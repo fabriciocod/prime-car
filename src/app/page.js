@@ -2,17 +2,20 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import seta from "../../public/seta.svg";
 import about_car from "../../public/about_car.png";
-import backgroundImage from "../../public/backg_benefits.png";
+import backgroundImage from "../../public/backg_benefits.svg";
+import map from "../../public/map.svg";
+import calendar from "../../public/calendar.svg";
+import key from "../../public/key.svg";
 
-function Titulo({ children }) {
+function Titulo({children}) {
   return <h1 className={styles.titulo}>{children}</h1>;
 }
 
-function Texto({ children }) {
+function Texto({children}) {
   return <p className={styles.texto}>{children}</p>;
 }
 
-function SubTitulo({ children }) {
+function SubTitulo({children}) {
   return <p className={styles.subTitulo}>{children}</p>;
 }
 // ajustar o elemento para um botão
@@ -22,6 +25,28 @@ function Botao() {
       Discover
       <Image src={seta}/>
     </button>
+  );
+}
+
+function Cards({children}){
+  return(
+    <div className={styles.cards}>
+      {children}
+    </div>
+  );
+}
+
+function Card({imagem, informacao,descricao}){
+  return(
+    <div className={styles.card}>
+      <Image className={styles.imagem} src={imagem}/>
+
+      <div className={styles.subTitulo}>
+        <p className={styles.informacao}>{informacao}</p>
+        <p className={styles.descricao}>{descricao}</p>
+      </div>
+    
+    </div>
   );
 }
 
@@ -92,8 +117,9 @@ function Page_About() {
 // Inicio Page Benefits
 function Page_Benefits() {
   return (
-    <div style={{backgroundImage: `url(${backgroundImage.src})`}}
-    className={styles.container_Benefits}>
+    <div 
+    style={{backgroundImage: `url(${backgroundImage.src})`
+  }} className={styles.container_Benefits}>
 
       <div className={styles.benefits_Titulo}>
         <Titulo>All the benefits you will get when you shop with us</Titulo>
@@ -106,39 +132,18 @@ function Page_Benefits() {
         </Texto>
       </div>
 
-      <div className={styles.benefits_Card}>
+      <div className={styles.container_cards}>
+        <Cards>
+          <Card imagem={map} informacao="Several Headquarters" descricao="You can find several Prime Car stores around the United States! Find the store closest to you now"/>
 
-        <div className={styles.card_conteudo}>
+          <Card imagem={calendar} informacao="Schedule Your Best Day" descricao="Choose the day and time to take a test drive for free!"/>
 
-          <div className={styles.map}>
-          imagealign-content: center;
-
-          Texto 1
-
-          Texto 2
-          
-          </div> 
-
-          <div className={styles.caledario}>
-          image
-
-          Texto 1
-
-          Texto 2
-          
-          </div>
-
-          <div className={styles.chave}>
-          image
-
-          Texto 1
-
-          Texto 2
-          
-          </div>   
-        </div>
+          <Card imagem={key} informacao="Receive your car right away" descricao="Close the contract and you get the keys right away"/>
+        
+        </Cards>
 
       </div>
+
     </div>
   );
 }
