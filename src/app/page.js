@@ -39,8 +39,36 @@ function Cards({children}){
 }
 
 function Card({imagem, texto, descricao, id }){
+  
+  function handleColorCard(){
+
+  
+  switch (id) {
+
+    case 'map':
+      console.log('map');
+      return(
+        '#00DDA8'
+      );
+
+    case 'calendar':
+      console.log('calendar');
+      return(
+        '#CF2929'
+      );
+      
+    case 'key':
+      console.log('key');
+      return(
+        '#0058DD'
+      );
+      
+    default:
+      console.log(`Sorry, we are out of ${expr}.`);
+}}
+
   return(
-    <div className={styles.card} style={id=='map'?{backgroundColor:'#fff'}:null}>
+    <div className={styles.card} style={{backgroundColor:handleColorCard()}}>
       <Image className={styles.imagem} src={imagem}/>
 
       <div className={styles.cabecalhoCard}>
@@ -60,7 +88,7 @@ function Page_index() {
 
       <div className={styles.page}>
 
-        <div className={styles.index_Titulo}>
+        <div  className={styles.index_Titulo}>
           <Titulo>More economy, same speed</Titulo>
         </div>
 
@@ -173,15 +201,16 @@ function Page_Cars(){
       </div>
 
       <div className={styles.cars_painel}>
-        <div>
         <Image src={cars}/>
+        <div className={styles.cars_conteudo}>
+        
         </div>
       </div>
 
     </div>
   );
 }
-
+// Final Page Cars
 export default function Home() {
   return (
     <main className={styles.main}>

@@ -202,7 +202,7 @@
 .container_cars{
     border: 1px solid #fff;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     
 
@@ -217,11 +217,25 @@
     
 }
 
+.cars_Titulo{
+    border: 1px solid #fff;
+
+    font-size: 50px;
+    text-align: center;
+    padding: 0;
+
+}
+
+.cars_Texto{
+    border: 1px solid #fff;
+
+    font-size: 80px;
+
+    text-align: center;
+}
 .cars_painel{
 
     border: 1px solid #fff;
 
-    /* top:5094;
-    position: fixed; */
 }
 
