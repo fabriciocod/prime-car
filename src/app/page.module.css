@@ -1,20 +1,23 @@
 /* Inicio da Page_index */
+/* .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+    min-height: 100vh;
+} */
+
 .container_index{
-    
-    flex-direction: row;
-    justify-content: flex-end;
-    
-    top: 204px; 
-    left: 50px;
+        
+    /* top:204px;
+    right:300px; */
 
-    position: fixed;
-    
-    /* border: 1px solid #f2ebeb; */
+    margin-top: 0;
+    /* position: fixed; */
 
-    width: 1800px;
-    height: 535px;
-
-    margin-left: 0;
+    width: 1920px;
+    height: 1020px;
 }
 
 .index_Titulo{
@@ -25,17 +28,18 @@
     width: 700px;
     height: 300px;
 
+    top:204px;
     left: 1150px;
     position: fixed;
-  
 }
 
 .index_Texto{
+    align-content: center;
+    
     font-size: 32px;
     text-align: right;
     
-
-    width: 318px;align-content: center;
+    width: 318px;
 
     left: 1530px;
     top: 495px;
@@ -99,6 +103,9 @@
 }
 
 .about_Texto{
+    font-size: 32px;
+
+    
     width: 785px;    
 }
 
@@ -113,15 +120,14 @@
 
 /* Inicio Page Benefits */
 .container_Benefits{
-    border: 1px solid #fff;
-
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
 
     gap: 40px;
 
-    top:1754px;
+    top:1870px;
     left:0px;
 
     position: fixed;
@@ -146,26 +152,60 @@
 }
 
 .benefits_Texto{
+    font-size: 30px;
 
-    top:2116px;
-    position: fixed;
-}
-
-.container_cards{
-    border: 1px solid #fff;
-    
-
-    width: 1460px;
-    height: 400px;
-
-    top: 2300px;
-
+    top:2220px;
     position: fixed;
 }
 
 .card{
-    border: 1px solid #fff;
+    background-color:#e40a0a;
+    border-radius:7px;
+    flex-shrink: 0;
+    filter: blur(.3px);
+    height: 400px;
+    width: 400px;
+    
+}
+
+.texto{
+    color: #f5f8fa;
+    font-size: 16.071px;
+    margin: 0;
+}
+
+.cards{
+    display: flex; /* coloca elementos na posição horinzontal*/
+    gap: 85px; /* defini espaço entre os cards*/
+
+    top: 2333px;
+    left: 230px;
+    position: fixed;
+
+    justify-content:space-around;/* o gap deve ser usado com flex-start, mas também é opcional*/
+    /*justify-content: space-between; primeira forma de ajusta espaçamento dos cards
+    width: 769px;*/ 
+
+}
+
+.imagem{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+/* Final Benefits */
+
+/* inicio Cars */
+
+.container_cars{
+    border: 1px solid #fff;
+
+    top: 2895px;
+    
+    position: fixed;
+
+    width: 1920px;
+    height: 852px;
 }

@@ -2,7 +2,8 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import seta from "../../public/seta.svg";
 import about_car from "../../public/about_car.png";
-import backgroundImage from "../../public/backg_benefits.svg";
+import bg from '../../public/background.png';
+import back from "../../public/backg_benefits.svg";
 import map from "../../public/map.svg";
 import calendar from "../../public/calendar.svg";
 import key from "../../public/key.svg";
@@ -36,16 +37,17 @@ function Cards({children}){
   );
 }
 
-function Card({imagem, informacao,descricao}){
+function Card({imagem, texto, descricao }){
   return(
     <div className={styles.card}>
       <Image className={styles.imagem} src={imagem}/>
 
-      <div className={styles.subTitulo}>
-        <p className={styles.informacao}>{informacao}</p>
-        <p className={styles.descricao}>{descricao}</p>
+      <div className={styles.cabecalhoCard}>
+      <p className={styles.texto}>{texto}</p>
+      <p className={styles.descricao}>{descricao}</p>
+
       </div>
-    
+      
     </div>
   );
 }
@@ -53,20 +55,25 @@ function Card({imagem, informacao,descricao}){
 // Inicio Page Index
 function Page_index() {
   return (
-    <div className={styles.container_index}>
-      <div className={styles.index_Titulo}>
-        <Titulo>More economy, same speed</Titulo>
-      </div>
+    <div style={{backgroundImage: `url(${bg.src})`}} className={styles.container_index}>
 
-      <div className={styles.index_Texto}>
-        <SubTitulo>
-          The most beloved cars of the moment for those who want to ride in
-          style without spending too much
-        </SubTitulo>
-      </div>
+      <div className={styles.page}>
 
-      <div className={styles.index_botao}>
-        <Botao />
+        <div className={styles.index_Titulo}>
+          <Titulo>More economy, same speed</Titulo>
+        </div>
+
+        <div className={styles.index_Texto}>
+          <SubTitulo>
+            The most beloved cars of the moment for those who want to ride in
+            style without spending too much
+          </SubTitulo>
+        </div>
+
+        <div className={styles.index_botao}>
+          <Botao />
+        </div>
+      
       </div>
     </div>
   );
@@ -87,17 +94,13 @@ function Page_About() {
           <Texto>
             We pride ourselves at being able to get our customer into the car
             that they want, and more importantly, at they price they are looking
-            for.
-          </Texto>
-
-          <Texto>
+            for.<br/>
+          
             We maintain outstanding customer service by listening to our
             customers and making sure that we meet their needs. Even if you
             don't buy from us, we will offer free advice on whe to look for when
-            buying a used car or truck.
-          </Texto>
-
-          <Texto>
+            buying a used car or truck.<br/>
+                   
             Our philosophy is to accomodate you, the customer, with outstanding
             service while providing you the highest quality automobile needs at
             wholesale prices. We have a wide selection of vehicles and the
@@ -118,7 +121,7 @@ function Page_About() {
 function Page_Benefits() {
   return (
     <div 
-    style={{backgroundImage: `url(${backgroundImage.src})`
+    style={{backgroundImage: `url(${back.src})`
   }} className={styles.container_Benefits}>
 
       <div className={styles.benefits_Titulo}>
@@ -132,13 +135,13 @@ function Page_Benefits() {
         </Texto>
       </div>
 
-      <div className={styles.container_cards}>
+      <div>
         <Cards>
-          <Card imagem={map} informacao="Several Headquarters" descricao="You can find several Prime Car stores around the United States! Find the store closest to you now"/>
+          <Card imagem={map} texto="Several Headquarters" descricao="You can find several Prime Car stores around the United States! Find the store closest to you now"/>
 
-          <Card imagem={calendar} informacao="Schedule Your Best Day" descricao="Choose the day and time to take a test drive for free!"/>
+          <Card imagem={calendar} texto="Schedule Your Best Day" descricao="Choose the day and time to take a test drive for free!"/>
 
-          <Card imagem={key} informacao="Receive your car right away" descricao="Close the contract and you get the keys right away"/>
+          <Card imagem={key} texto="Receive your car right away" descricao="Close the contract and you get the keys right away"/>
         
         </Cards>
 
@@ -150,13 +153,41 @@ function Page_Benefits() {
 
 // Final Page Benefits
 
+//Inicio Page Cars
+
+function Page_Cars(){
+  return(
+    <div className={styles.container_cars}>
+
+      <div className={styles.cars_Titulo}>
+        <Titulo>
+        The cars that are hot right now
+        </Titulo>
+      </div>
+
+      <div className={styles.cars_Texto}>
+        <Texto>
+        Buy yours and be the most stylish in the neighborhood
+        </Texto>
+      </div>
+
+      <div className={styles.cars_painel}>
+        <div className={styles.cars_model}>
+          <Image/>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <>
+    <main className={styles.main}>
       <Page_index />
       <Page_About />
       <Page_Benefits />
-    </>
+      <Page_Cars />
+    </main>
   );
 }
 

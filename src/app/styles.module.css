@@ -2,23 +2,25 @@
 
 /* inicio do Header */
 .container_header{
-   
-    padding: 0;
     
+    display: flex;
+    justify-content: center;
+       
     width: 1920px;
-    height: 1020px;
+    height: auto;
     
 }
 
 .container_nav{
+    
     display: flex;
     justify-content: space-between;
     align-items:center;
-    left: 50px;
-    position: fixed;
     
-
-    width: 1800px;
+    padding: 32px 100px;
+    
+    width: 1920px;
+    height: 48px;
 }
 
 .logo{

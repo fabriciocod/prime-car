@@ -1,6 +1,6 @@
 import './globals.css'
 import styles from './styles.module.css'
-import backgroundImage from '../../public/background.png';
+
 
 
 export const metadata = {
@@ -39,43 +39,38 @@ function Contato(){
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={styles.corpo}>
+      <body>
        
       <header>
-        <div 
-        style={{backgroundImage: `url(${backgroundImage.src})`
-        
-        
-      }} className={styles.container_header}>
+        <div className={styles.container_header}>
 
-        <div className={styles.container_nav}>
+          <div className={styles.container_nav}>
+              <div className={styles.logo}>
+                <Logo/>
+              </div>
+            
+              <div className={styles.menu}>
 
-            <div className={styles.logo}>
-              <Logo x={100} y={32}/>
-            </div>
-          
-            <div className={styles.menu}>
+                <Menu>
 
-              <Menu>
+                  <ItemMenu nome = "Home"/>
+                  <ItemMenu nome = "About"/>
+                  <ItemMenu nome = "Benefits"/>
+                  <ItemMenu nome = "Car"/>
 
-                <ItemMenu nome = "Home"/>
-                <ItemMenu nome = "About"/>
-                <ItemMenu nome = "Benefits"/>
-                <ItemMenu nome = "Car"/>
+                </Menu>
+              </div>
 
-              </Menu>
-            </div>
+              <div>
+                <Contato/>
+              </div>
 
-            <div>
-              <Contato/>
-            </div>
-
-        </div>
+          </div>
         </div>
       </header>
 
       <main>
-       {children} 
+        {children}
       </main>
 
       
