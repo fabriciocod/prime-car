@@ -18,7 +18,7 @@ function Texto({children}) {
 }
 
 function SubTitulo({children}) {
-  return <p className={styles.subTitulo}>{children}</p>;
+  return <h2 className={styles.subTitulo}>{children}</h2>;
 }
 // ajustar o elemento para um botão
 function Botao() {
@@ -200,9 +200,21 @@ function Page_Cars(){
         </Texto>
       </div>
 
-      <div className={styles.cars_painel}>
-        <Image src={cars}/>
+      <div style={{backgroundImage: `url(${cars.src})`}} className={styles.cars_painel}>
+        
         <div className={styles.cars_conteudo}>
+
+          <div className={styles.cont_subTitulo}>
+            <subTitulo>Tesla Model 3</subTitulo>
+          </div>
+        
+          <div className={styles.cont_Texto}>
+            <Texto>Disruptive, avant-garde, futuristic, innovative.</Texto>
+          </div>
+        
+        <div className={styles.cont_Contato}>
+          <Texto>Concatc</Texto>
+        </div>
         
         </div>
       </div>
