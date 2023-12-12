@@ -7,6 +7,7 @@ import back from "../../public/backg_benefits.svg";
 import map from "../../public/map.svg";
 import calendar from "../../public/calendar.svg";
 import key from "../../public/key.svg";
+import cars from "../../public/cars.png";
 
 function Titulo({children}) {
   return <h1 className={styles.titulo}>{children}</h1>;
@@ -37,9 +38,9 @@ function Cards({children}){
   );
 }
 
-function Card({imagem, texto, descricao }){
+function Card({imagem, texto, descricao, id }){
   return(
-    <div className={styles.card}>
+    <div className={styles.card} style={id=='map'?{backgroundColor:'#fff'}:null}>
       <Image className={styles.imagem} src={imagem}/>
 
       <div className={styles.cabecalhoCard}>
@@ -137,11 +138,11 @@ function Page_Benefits() {
 
       <div>
         <Cards>
-          <Card imagem={map} texto="Several Headquarters" descricao="You can find several Prime Car stores around the United States! Find the store closest to you now"/>
+          <Card id={'map'} imagem={map} texto="Several Headquarters" descricao="You can find several Prime Car stores around the United States! Find the store closest to you now"/>
 
-          <Card imagem={calendar} texto="Schedule Your Best Day" descricao="Choose the day and time to take a test drive for free!"/>
+          <Card  id={'calendar'} imagem={calendar} texto="Schedule Your Best Day" descricao="Choose the day and time to take a test drive for free!"/>
 
-          <Card imagem={key} texto="Receive your car right away" descricao="Close the contract and you get the keys right away"/>
+          <Card  id={'key'} imagem={key} texto="Receive your car right away" descricao="Close the contract and you get the keys right away"/>
         
         </Cards>
 
@@ -172,10 +173,11 @@ function Page_Cars(){
       </div>
 
       <div className={styles.cars_painel}>
-        <div className={styles.cars_model}>
-          <Image/>
+        <div>
+        <Image src={cars}/>
         </div>
       </div>
+
     </div>
   );
 }

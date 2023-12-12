@@ -30,7 +30,7 @@
 
     top:204px;
     left: 1150px;
-    position: fixed;
+    position: absolute;
 }
 
 .index_Texto{
@@ -43,7 +43,7 @@
 
     left: 1530px;
     top: 495px;
-    position: fixed;
+    position: absolute;
 }
 
 .texto{
@@ -66,7 +66,7 @@
     top:730px;
     left:1633px;
 
-    position: fixed;
+    position: absolute;
     padding: 12px 28px;
 }
 /* Final Page Index */
@@ -80,7 +80,7 @@
     width: 1920px;
     height: 727px;
 
-    position: fixed;
+    position: absolute;
 }
 
 .about_Conteudo{
@@ -130,7 +130,7 @@
     top:1870px;
     left:0px;
 
-    position: fixed;
+    position: absolute;
 
     width: 1920px;
     height: 1026px;
@@ -148,14 +148,14 @@
 
     left: 318px;
 
-    position: fixed;
+    position: absolute;
 }
 
 .benefits_Texto{
     font-size: 30px;
 
-    top:2220px;
-    position: fixed;
+    top:320px;
+    position: absolute;
 }
 
 .card{
@@ -178,9 +178,9 @@
     display: flex; /* coloca elementos na posição horinzontal*/
     gap: 85px; /* defini espaço entre os cards*/
 
-    top: 2333px;
+    top: 433px;
     left: 230px;
-    position: fixed;
+    position: absolute;
 
     justify-content:space-around;/* o gap deve ser usado com flex-start, mas também é opcional*/
     /*justify-content: space-between; primeira forma de ajusta espaçamento dos cards
@@ -201,11 +201,27 @@
 
 .container_cars{
     border: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
 
     top: 2895px;
     
-    position: fixed;
+    position: absolute;
 
     width: 1920px;
     height: 852px;
+
+    
 }
+
+.cars_painel{
+
+    border: 1px solid #fff;
+
+    /* top:5094;
+    position: fixed; */
+}
+
