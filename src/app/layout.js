@@ -1,5 +1,6 @@
-import './globals.css'
-import styles from './styles.module.css'
+import './globals.css';
+import styles from './styles.module.css';
+import bg from '../../public/background.png';
 
 
 
@@ -42,7 +43,7 @@ export default function RootLayout({ children }) {
       <body>
        
       <header>
-        <div className={styles.container_header}>
+        <div style={{backgroundImage: `url(${bg.src})`}} className={styles.container_header}>
 
           <div className={styles.container_nav}>
               <div className={styles.logo}>

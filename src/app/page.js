@@ -2,12 +2,13 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import seta from "../../public/seta.svg";
 import about_car from "../../public/about_car.png";
-import bg from '../../public/background.png';
 import back from "../../public/backg_benefits.svg";
 import map from "../../public/map.svg";
 import calendar from "../../public/calendar.svg";
 import key from "../../public/key.svg";
 import cars from "../../public/cars.png";
+import movie from "../../public/movie_car.png";
+import iconplay from "../../public/icon_play.svg";
 
 function Titulo({children}) {
   return <h1 className={styles.titulo}>{children}</h1>;
@@ -84,7 +85,7 @@ function Card({imagem, texto, descricao, id }){
 // Inicio Page Index
 function Page_index() {
   return (
-    <div style={{backgroundImage: `url(${bg.src})`}} className={styles.container_index}>
+    <div className={styles.container_index}>
 
       <div className={styles.page}>
 
@@ -179,11 +180,9 @@ function Page_Benefits() {
     </div>
   );
 }
-
 // Final Page Benefits
 
 //Inicio Page Cars
-
 function Page_Cars(){
   return(
     <div className={styles.container_cars}>
@@ -222,7 +221,47 @@ function Page_Cars(){
     </div>
   );
 }
-// Final Page Cars
+// Final Page Car
+
+// Inicio Page Movie
+function Page_Movie(){
+  return(
+    <div className={styles.container_movie}>
+      <div className={styles.movie_informacao}>
+        <Titulo>
+        Be amazed by the power
+        </Titulo>
+        
+        <Texto>
+        Speed and economy together in one place, use and abuse your car's potential.
+        </Texto>
+
+      </div>
+
+      <div style={{backgroundImage: `url(${movie.src})`}} className={styles.movie_car}>
+        <Image src={iconplay}/>
+      </div>
+    </div>
+  );
+}
+// Final Page Movie
+
+// Inicio Page Contato
+function Page_Contato(){
+  return(
+    <div className={styles.container_contato}>
+      <div className={styles.contact_us}>
+        Titulo
+        Texto
+      </div>
+
+      <div className={styles.contact_form}>
+        formulario
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -230,6 +269,8 @@ export default function Home() {
       <Page_About />
       <Page_Benefits />
       <Page_Cars />
+      <Page_Movie />
+      <Page_Contato />
     </main>
   );
 }
