@@ -340,5 +340,20 @@
     position: absolute;
 }
 
+.contact_us{
+    border: 1px solid #ffF;
+
+    width: 689px;
+    height: 298px;
+}
+
+.contact_us h1{
+    font-size: 120px;
+    margin: 0;
+}
+
+.contact_us p{
+    font-size: 30px;
+}
 
 

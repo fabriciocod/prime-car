@@ -251,8 +251,14 @@ function Page_Contato(){
   return(
     <div className={styles.container_contato}>
       <div className={styles.contact_us}>
-        Titulo
-        Texto
+        <Titulo>
+        Contact us
+        </Titulo>
+
+        <Texto>
+        o find out more information about cars and quotes, fill out the form on the side or contact us by phone.
+        </Texto>
+        
       </div>
 
       <div className={styles.contact_form}>
