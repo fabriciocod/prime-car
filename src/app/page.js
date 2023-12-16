@@ -9,6 +9,7 @@ import key from "../../public/key.svg";
 import cars from "../../public/cars.png";
 import movie from "../../public/movie_car.png";
 import iconplay from "../../public/icon_play.svg";
+import localizacao from "../../public/localizacao.png"
 
 function Titulo({children}) {
   return <h1 className={styles.titulo}>{children}</h1>;
@@ -262,7 +263,40 @@ function Page_Contato(){
       </div>
 
       <div className={styles.contact_form}>
-        formulario
+        <form action="#" method="post">
+          <div className={styles.contact_nome}>
+            <input id="name" type="text" placeholder="You Name"/>
+          </div>
+          
+          <div className={styles.contact_email}>
+            <input id="email" type="email" placeholder="You Email"/>
+          </div>
+
+          <div className={styles.contact_phone}>
+            <input id="tel" type="tel" placeholder="Phone Number"/>
+          </div>
+
+          <div className={styles.contact_country}>
+            <select id="pais" name="pais">
+            <option>Country</option>
+            <option>Brazil</option>
+            <option>Argentina</option>
+          </select>
+          </div>
+
+          <div className={styles.contact_message}>
+            <textarea cols="30" row="1" id="message" placeholder="Message"/>
+          </div>
+          
+          <div className={styles.contact_botao}>
+            <button type="submit" value="Submit">Submit</button>
+          </div>      
+        </form>
+        
+        <div className={styles.contact_localizacao}>
+          <Image src={localizacao} alt="localização"/>
+        </div> 
+        
       </div>
     </div>
   );

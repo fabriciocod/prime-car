@@ -1,10 +1,15 @@
-
-
 body {
-  width: 1820px;
-  /* height: 5584px;  */
+
   background: #080808;
   color:#fff;
+
+  margin: 0;
+  padding: 0;
+
+
+  width: 1820px;
+  /* height: 5584px;  */
+ 
 }
 
 

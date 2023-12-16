@@ -332,6 +332,9 @@
 /* Inicio Page Contato */
 .container_contato{
     border: 1px solid #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
     width: 1920px;
     height: 541px;
@@ -343,8 +346,8 @@
 .contact_us{
     border: 1px solid #ffF;
 
-    width: 689px;
-    height: 298px;
+    width: 659px;
+    height: 198px;
 }
 
 .contact_us h1{
@@ -356,4 +359,6 @@
     font-size: 30px;
 }
 
-
+.contact_localizacao{
+    border: 3px solid #cc0b0b;
+}
