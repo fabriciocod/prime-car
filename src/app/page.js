@@ -9,7 +9,10 @@ import key from "../../public/key.svg";
 import cars from "../../public/cars.png";
 import movie from "../../public/movie_car.png";
 import iconplay from "../../public/icon_play.svg";
-import localizacao from "../../public/localizacao.png"
+import localizacao from "../../public/localizacao.png";
+import icon_group from "../../public/icon_group.svg";
+import backg_about from "../../public/backg_about.png";
+import backg_contact from "../../public/backg_contact.png";
 
 function Titulo({children}) {
   return <h1 className={styles.titulo}>{children}</h1>;
@@ -23,12 +26,9 @@ function SubTitulo({children}) {
   return <h2 className={styles.subTitulo}>{children}</h2>;
 }
 // ajustar o elemento para um botão
-function Botao() {
+function Botao({children}) {
   return (
-    <button className={styles.botao}>
-      Discover
-      <Image src={seta}/>
-    </button>
+    <button className={styles.botao}>{children}</button>
   );
 }
 
@@ -40,48 +40,7 @@ function Cards({children}){
   );
 }
 
-function Card({imagem, texto, descricao, id }){
-  
-  function handleColorCard(){
 
-  
-  switch (id) {
-
-    case 'map':
-      console.log('map');
-      return(
-        '#00DDA8'
-      );
-
-    case 'calendar':
-      console.log('calendar');
-      return(
-        '#CF2929'
-      );
-      
-    case 'key':
-      console.log('key');
-      return(
-        '#0058DD'
-      );
-      
-    default:
-      console.log(`Sorry, we are out of ${expr}.`);
-}}
-
-  return(
-    <div className={styles.card} style={{backgroundColor:handleColorCard()}}>
-      <Image className={styles.imagem} src={imagem}/>
-
-      <div className={styles.cabecalhoCard}>
-      <p className={styles.texto}>{texto}</p>
-      <p className={styles.descricao}>{descricao}</p>
-
-      </div>
-      
-    </div>
-  );
-}
 
 // Inicio Page Index
 function Page_index() {
@@ -102,7 +61,9 @@ function Page_index() {
         </div>
 
         <div className={styles.index_botao}>
-          <Botao />
+          <Botao>
+            Discover <Image src={seta}/>
+          </Botao>
         </div>
       
       </div>
@@ -114,7 +75,8 @@ function Page_index() {
 // Inicio Page About
 function Page_About() {
   return (
-    <div className={styles.container_About}>
+    <div style={{backgroundImage: `url(${backg_about.src})`
+  }}className={styles.container_About}>
 
       <div className={styles.about_Titulo}>
         <Titulo>ABOUT US</Titulo>
@@ -166,18 +128,69 @@ function Page_Benefits() {
         </Texto>
       </div>
 
-      <div>
-        <Cards>
-          <Card id={'map'} imagem={map} texto="Several Headquarters" descricao="You can find several Prime Car stores around the United States! Find the store closest to you now"/>
+      <div className={styles.benefits_Cards}>
+        <div className={styles.card_map}>
+          <Cards >
+            <div className={styles.card_image}>
+              <Image src={map} alt="Map"/>
+            </div>
+            
+            <div className={styles.card_subtitulo}>
+              <SubTitulo>Several Headquarters</SubTitulo>
+            </div>
+            
+            <div className={styles.card_texto}>
+              <Texto>
+              You can find several Prime Car stores 
+              around the United States! Find the store
+              closest to you now
+              </Texto>
+            </div>
+            
+          </Cards>
+        </div>
 
-          <Card  id={'calendar'} imagem={calendar} texto="Schedule Your Best Day" descricao="Choose the day and time to take a test drive for free!"/>
-
-          <Card  id={'key'} imagem={key} texto="Receive your car right away" descricao="Close the contract and you get the keys right away"/>
-        
+        <div className={styles.card_calendar}>
+        <Cards >
+        <div className={styles.card_calendar_image}>
+              <Image src={calendar} alt="Calendar"/>
+            </div>
+            
+            <div className={styles.card_subtitulo}>
+              <SubTitulo>Schedule Your Best Day</SubTitulo>
+            </div>
+            
+            <div className={styles.card_texto}>
+              <Texto>
+              Choose the day and time 
+              to take a test drive for free!
+              </Texto>
+            </div>
         </Cards>
+        </div>
+
+        <div className={styles.card_key}>
+        <Cards >
+        <div className={styles.card_key_image}>
+              <Image src={key} alt="Key"/>
+            </div>
+            
+            <div className={styles.card_subtitulo}>
+              <SubTitulo>Receive your car right away</SubTitulo>
+            </div>
+            
+            <div className={styles.card_texto}>
+              <Texto>
+              Close the contract 
+              and you get the keys right away
+              </Texto>
+            </div>
+        </Cards>
+        </div>
 
       </div>
-
+        
+      
     </div>
   );
 }
@@ -213,7 +226,7 @@ function Page_Cars(){
           </div>
         
         <div className={styles.cont_Contato}>
-          <Texto>Concatc</Texto>
+          <Botao>Contact</Botao>
         </div>
         
         </div>
@@ -250,53 +263,43 @@ function Page_Movie(){
 // Inicio Page Contato
 function Page_Contato(){
   return(
-    <div className={styles.container_contato}>
-      <div className={styles.contact_us}>
-        <Titulo>
-        Contact us
-        </Titulo>
-
-        <Texto>
-        o find out more information about cars and quotes, fill out the form on the side or contact us by phone.
-        </Texto>
+    <div style={{backgroundImage: `url(${backg_contact.src})`
+  }} className={styles.container_contato}>
+      <div className={styles.contact_informacao}>
         
+        <div className={styles.contact_conteudo}>
+          <Titulo>
+            CONTACT US
+          </Titulo>
+
+          <Texto>
+            To find out more information about cars and 
+            quotes, fill out the form on the side or contact 
+            us by phone.
+            </Texto>
+        </div>
+
+        <form className={styles.contact_form}>
+          <div className={styles.contact_input}>
+            <input id="name" type="text" placeholder="You Name" autoFocus/>
+            <input id="email" type="email" placeholder="You Email"/>
+            <input id="phone" type="tel" placeholder="Phone Number"/>
+
+            <select>
+              <option>Country</option>
+              <option>Brazil</option>
+              <option>Argentina</option>
+            </select>
+
+            <textarea cols="63" placeholder="Message"/>
+          </div>
+
+          <div className={styles.contact_submit}><Botao>Submit</Botao></div>
+        </form>
       </div>
 
-      <div className={styles.contact_form}>
-        <form action="#" method="post">
-          <div className={styles.contact_nome}>
-            <input id="name" type="text" placeholder="You Name"/>
-          </div>
-          
-          <div className={styles.contact_email}>
-            <input id="email" type="email" placeholder="You Email"/>
-          </div>
-
-          <div className={styles.contact_phone}>
-            <input id="tel" type="tel" placeholder="Phone Number"/>
-          </div>
-
-          <div className={styles.contact_country}>
-            <select id="pais" name="pais">
-            <option>Country</option>
-            <option>Brazil</option>
-            <option>Argentina</option>
-          </select>
-          </div>
-
-          <div className={styles.contact_message}>
-            <textarea cols="30" row="1" id="message" placeholder="Message"/>
-          </div>
-          
-          <div className={styles.contact_botao}>
-            <button type="submit" value="Submit">Submit</button>
-          </div>      
-        </form>
-        
-        <div className={styles.contact_localizacao}>
-          <Image src={localizacao} alt="localização"/>
-        </div> 
-        
+      <div style={{backgroundImage: `url(${localizacao.src})`}} className={styles.contact_map}>
+        <Image src={icon_group} alt="Localização da Prime Car"/>
       </div>
     </div>
   );

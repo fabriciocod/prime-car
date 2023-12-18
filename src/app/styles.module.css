@@ -47,4 +47,79 @@
 }
 /* final do Header */
 
+/* Inicio do Footer */
+.container_footer{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 1920px;
+    top: 5620px;
+
+    position: absolute;
+}
+
+.footer_informacoes{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    padding: 60px 0px;
+
+    width: 1920px;
+    /* height: 249; */
+}
+
+.footer_city ul{
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.footer_links ul{
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.footer_email ul{
+    
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.footer_call ul{
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.footer_direito{
+    
+       
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    align-items: center;
+
+    width: 1720px;
+    height: 50px;
+}
+
+.footer_privacy{
+    left: 100px;
+    position: absolute;
+}
+
+.footer_term{
+    left: 210px;
+    position: absolute;
+}
+
+.footer_reserved{
+    left: 1520px;
+    position: absolute;
+    
+}
 
