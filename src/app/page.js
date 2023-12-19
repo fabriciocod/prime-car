@@ -156,11 +156,11 @@ function Page_Benefits() {
               <Image src={calendar} alt="Calendar"/>
             </div>
             
-            <div className={styles.card_subtitulo}>
+            <div className={styles.calendar_subtitulo}>
               <SubTitulo>Schedule Your Best Day</SubTitulo>
             </div>
             
-            <div className={styles.card_texto}>
+            <div className={styles.calendar_texto}>
               <Texto>
               Choose the day and time 
               to take a test drive for free!
@@ -175,11 +175,11 @@ function Page_Benefits() {
               <Image src={key} alt="Key"/>
             </div>
             
-            <div className={styles.card_subtitulo}>
+            <div className={styles.key_subtitulo}>
               <SubTitulo>Receive your car right away</SubTitulo>
             </div>
             
-            <div className={styles.card_texto}>
+            <div className={styles.key_texto}>
               <Texto>
               Close the contract 
               and you get the keys right away

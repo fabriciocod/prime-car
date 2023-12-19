@@ -126,6 +126,8 @@
     text-align: center;
 
     width: 1284px;
+
+    margin-bottom: 0;
     
 }
 
@@ -133,6 +135,8 @@
 .benefits_Texto p{
     /* border:1px solid #fff; */
     font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 100px;
         
 }
 
@@ -153,30 +157,40 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    
    
-    width: 400px;
-    height: 400px;
+    width: 430px;
+    height: 430px;
 }
 
 .card_image{
     /* border: 1px solid #fff; */
     
     display: flex;
-    /* padding: 13.05px 33.93px 15.66px 33.93px; */
+    padding: 13.05px 33.93px 15.66px 33.93px;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
+
+    top:400px;
+    left: 300px;
+
+    position: absolute;
     
 }
 
 .card_subtitulo{
-    /* border: 1px solid #fff; */
+    font-size: 32px;
     text-align: center;
+    margin-top: 150px;
+
 }
 
 .card_texto{
-    /* border: 1px solid #fff; */
+    font-size: 24px;
     text-align: center;
+    padding: 0px 10px;
 }
 
 
@@ -191,8 +205,8 @@
     flex-direction: column;
     justify-content: center;
 
-    width: 400px;
-    height: 400px;
+    width: 430px;
+    height: 430px;
 }
 
 .card_calendar_image{
@@ -200,17 +214,34 @@
     /* padding: 13.05px 33.93px 15.66px 33.93px; */
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
+
+    top:400px;
+    left: 850px;
+
+    position: absolute;
 }
 
+.calendar_subtitulo{
+    font-size: 32px;
+    text-align: center;
+    margin-top: 150px; 
+}
+
+.calendar_texto{
+    font-size: 24px;
+    text-align: center;
+    padding: 0px 10px;
+    
+}
 .card_key{
     /* border: 1px solid #116606; */
 
     border-radius: 16px;
     background: rgba(0, 88, 221, 0.60);
 
-    width: 400px;
-    height: 400px;
+    width: 430px;
+    height: 430px;
 }
 
 .card_key_image{
@@ -219,6 +250,23 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+
+    top:400px;
+    left: 1350px;
+
+    position: absolute;
+}
+
+.key_subtitulo{
+    font-size: 32px;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.key_texto{
+    font-size: 24px;
+    text-align: center;
+    padding: 0px 10px;
 }
 /* Final Benefits */
 
@@ -239,17 +287,27 @@
     height: 852px;  
 }
 
-.cars_Titulo{
+.cars_Titulo h1{
     
-    font-size: 50px;
-    text-align: center;
-    padding: 0;
+    font-size: 110px;
+    text-align: left;
+    
+    margin-bottom: 0;
+
+    top:0;
+    left: 100px;
+    position: absolute;
+
 }
 
-.cars_Texto{
-    font-size: 80px;
+.cars_Texto p{
+    font-size: 32px;
+    padding: 50px 0;
+    /* text-align: left; */
 
-    text-align: center;
+    top:150px;
+    left: 100px;
+    position: absolute;
 }
 
 .cars_painel{
@@ -276,11 +334,13 @@
 }
 
 .cont_subTitulo{
-    font-size: 32px;
+    font-size: 40px;
+    margin-bottom: 0;
 }
 
-.cont_Texto{
-    font-size: 40px;
+.cont_Texto p{
+    margin-top: 0;
+    font-size: 24px;
 }
 
 .cont_Contato button{
@@ -357,6 +417,7 @@
     width: 1720px;
     height: 817px;
 }
+/* Fintal Page Movie */
 
 /* Inicio Page Contato */
 .container_contato{
@@ -379,6 +440,7 @@
 
     width: 1920px;
     height: 309px;
+    padding: 10px 0;
     
 }
 
@@ -411,7 +473,9 @@
 
     width: 727px;
     height: 300px;
-    padding: 10px 0;
+    /* padding: 10px 0; */
+
+    
 }
 
 .contact_form input{
@@ -420,7 +484,7 @@
     background: none;
     color: #fff;
 
-    margin-top: 50px;
+    margin-top: 30px;
 
     font-size: 24px;
 
