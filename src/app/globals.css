@@ -1,15 +1,23 @@
+@font-face {
+  font-family: 'NomeDaSuaFonte';
+  src: url('/fonts/American_Capitan.ttf') format('ttf'); /* ajuste o nome do arquivo conforme necessário */
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
 body {
 
   background: #080808;
   color:#fff;
 
+  font-family: 'American_Capitan', sans-serif;
   margin: 0;
   padding: 0;
 
 
   width: 1820px;
   /* height: 5584px;  */
- 
 }
 
 

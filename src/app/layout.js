@@ -8,12 +8,6 @@ import ink from '../../public/inkedin.png';
 import int from '../../public/instagram.png';
 
 
-// const myFont = localFont({
-//   src: '../font.American_Captain.tff',
-//   display: 'swap',
-// })
-
-
 
 export const metadata = {
   title: 'Prime Car',
