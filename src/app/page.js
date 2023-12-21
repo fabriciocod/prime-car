@@ -13,9 +13,11 @@ import localizacao from "../../public/localizacao.png";
 import icon_group from "../../public/icon_group.svg";
 import backg_about from "../../public/backg_about.png";
 import backg_contact from "../../public/backg_contact.png";
+import {american_captian} from './fonts'
+import {clsx} from 'clsx';
 
 function Titulo({children}) {
-  return <h1 className={styles.titulo}>{children}</h1>;
+  return <h1 className={clsx([styles.titulo, american_captian.className])}>{children}</h1>;
 }
 
 function Texto({children}) {
@@ -39,8 +41,6 @@ function Cards({children}){
     </div>
   );
 }
-
-
 
 // Inicio Page Index
 function Page_index() {
@@ -218,7 +218,7 @@ function Page_Cars(){
         <div className={styles.cars_conteudo}>
 
           <div className={styles.cont_subTitulo}>
-            <subTitulo>Tesla Model 3</subTitulo>
+            <SubTitulo>Tesla Model 3</SubTitulo>
           </div>
         
           <div className={styles.cont_Texto}>

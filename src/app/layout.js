@@ -6,6 +6,11 @@ import bg from '../../public/background.png';
 import fac from '../../public/facebook.png';
 import ink from '../../public/inkedin.png';
 import int from '../../public/instagram.png';
+import {american_captian} from './fonts'
+import {clsx} from 'clsx';
+
+ 
+
 
 
 
@@ -15,7 +20,7 @@ export const metadata = {
 // Adiciona o logo 
 function Logo(){
   return(
-    <h1 className={styles.logo}>PRIME CAR</h1>
+    <h1 className={clsx([styles.logo, american_captian.className])}>PRIME CAR</h1>
   );
 }
 // Adiciona SubTitulo com herança
